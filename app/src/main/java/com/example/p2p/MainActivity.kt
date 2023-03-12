@@ -18,10 +18,10 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.example.p2p.ui.theme.P2PTheme
 import androidx.lifecycle.ViewModelProvider
 import com.example.p2p.model.P2PController
+import com.example.p2p.view.ControlComponent
 import com.example.p2p.view.ShowList
 import com.example.p2p.viewmodel.MyViewModel
 import com.example.p2p.viewmodel.MyViewModelFactory
-
 
 class MainActivity : ComponentActivity() {
 
@@ -60,7 +60,7 @@ class MainActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        initializeP2P()
+        //initializeP2P()
 
         setContent {
             P2PTheme {
@@ -69,7 +69,8 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    ShowList(viewModel)
+                    //ShowList(viewModel)
+                    ControlComponent()
                 }
             }
         }
